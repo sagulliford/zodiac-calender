@@ -1,9 +1,11 @@
 package javafinal;
 
 import java.util.Scanner;
-
 import javax.swing.JOptionPane;
-
+/*
+ * Used for button14, finding your Zodiac Sign
+ * Zodiac Information from http://www.travelchinaguide.com/intro/social_customs/zodiac/
+ */
 public class animals {
 	Scanner input = new Scanner(System.in);
 		
@@ -11,7 +13,7 @@ public class animals {
 		boolean loop = true;
 		while (loop){
 			//source: Stack Overflow
-			String year = JOptionPane.showInputDialog("Please enter the year you were born(between 1984 and 2009):");
+			String year = JOptionPane.showInputDialog("Please enter the year you were born(between 1948 and 2009):");
 	int year1;
 	 year1 = Integer.parseInt(year);//StackOverflow
 
@@ -67,7 +69,7 @@ public class animals {
 	 			loop = false;
 	 	break;
 	 		}//while loop
-	 		if ( year1<=1984 && year1>=2019 )
+	 		if ( year1<=1948 && year1>=2019 )
 	 			{
 	 			loop = false;
 	 			

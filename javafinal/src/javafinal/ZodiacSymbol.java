@@ -11,9 +11,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
+import javax.swing.SwingUtilities;
+/*
+ * runs the 2nd JFrame and JButtons
+ * Zodiac Information from http://www.travelchinaguide.com/intro/social_customs/zodiac/
+ */
 public class ZodiacSymbol extends JFrame {
 	
 	private JLabel item2;
@@ -41,6 +46,7 @@ public class ZodiacSymbol extends JFrame {
 	//creating the buttons
 	//Mandy's JButtons on Moodle
     ImageIcon rat = new ImageIcon("rat-2015.jpg");
+     //borrowed code from Stack OverFlow
 	JButton b1=new JButton(rat);
 	
 	ImageIcon ox = new ImageIcon("ox.jpg");
@@ -79,7 +85,7 @@ public class ZodiacSymbol extends JFrame {
 	JButton b13= new JButton();
 	JButton b14= new JButton("Figure Out Your Sign Here!");
 	JButton b15= new JButton("Compatibility Test!");
-	JButton b16= new JButton();
+	JButton b16= new JButton("Exit");
 	
 		//Adding an action to button 1
 		b1.addActionListener(new ActionListener() {
@@ -125,58 +131,80 @@ public class ZodiacSymbol extends JFrame {
 		//Adding an action to button 5
 		b5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 5:</strong> What do snowmen like to do on the weekends?<br> click ok for the answer</html>");
-				JOptionPane.showMessageDialog(null, "Chill out!");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Dragon:1916, 1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012. Dragon enjoys a very high reputation in Chinese culture.<br>"
+	 			+"Chinese people always regard themselves as descendents of the dragon. In ancient China, this imaginary<br>"
+	 			+" creature was thought to speed across the sky with divine power. It is the token of authority, dignity,<br>"
+	 			+" honor, success, luck, and capacity. Emperors entitled themselves exclusively as 'dragon'.");
+	 			
 			}
 		});
 		
 		//Adding an action to button 6
 		b6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 6:</strong> \"The four basic food groups are candy, candy canes, candy corns and syrup. So go and enjoy some candy!\" - Buddy the Elf</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Snake:1917, 1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013. Snake carries the meanings of malevolence, cattiness and<br>"
+	 			+" mystery, as well as acumen and divination. In some places, people believe that a snake found in<br>"
+	 			+"their court can bring delight. However, in most cases, this animal is considered evil, which scares<br>"
+	 			+"people from the bottom of the heart. There are some idioms in China indicating the danger of this animal,<br>"
+	 			+"for example, once bitten by the snake twice shy of ten years.");
 			}
 		});
 		
 		//Adding an action to button 7
 		b7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 7:</strong> Hopefully this picture will brighten up your day!</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Horse: 1918, 1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014. The Five Elements of Horse is Fire (Huo), which symbolizes<br>"
+	 			+"enthusiasm and energy. The animal gives people an impression of independence and integrity. Its<br>"
+	 			+"spirit is recognized to be Chinese people's ethos - making unremitting efforts to improve themselves<br>"
+	 			+" with passion and diligence.");
 			}
 		});
 		
 		//Adding an action to button 8
 		b8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 8:</strong> Make homemade Hot Cocoa!</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Sheep: 1919, 1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015. Sheep (goat, or ram) is among the animals that people like<br>"
+	 			+"most. It is gentle and calm. Since ancient times, people have learned to use its fleece to make<br>"
+	 			+"writing brushes and skin to keep warm. The white cute creature often reminds people of beautiful<br>"
+	 			+"things.");
 			}
 		});
 		
 		//Adding an action to button 9
 		b9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 9:</strong> Drive around & see all the lights</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Monkey: 1920, 1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016. The monkey is a clever animal. It is usually compared to a<br>"
+	 			+"smart person. During the Spring and Autumn Period (770 - 476 BC), the dignified Chinese official title<br>"
+	 			+"of marquis was pronounced 'Hou', the same as the pronunciation of ‘monkey’ in Chinese. The animal was<br>"
+	 			+"thereby bestowed with an auspicious meaning.");
 			}
 		});
 		
 		//Adding an action to button 10
 		b10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 10:</strong> Make some sugar cookies & decorate them</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Rooster: 1921, 1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017. Rooster is almost the epitome of fidelity and punctuality. For<br>"
+	 			+"ancestors who had no alarm clocks, the crowing was significant, as it could awaken people to get up and start to<br>"
+	 			+"work. In Chinese culture, another symbolic meaning this animal carries is exorcising evil spirits.");
 			}
 		});
 		
 		//Adding an action to button 11
 		b11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 11:</strong>Two snowmen in a field, one turned to the other and said \"I don't know about you but I can smell carrots.\"!</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Dog: 1922, 1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018. Dog is man's good friend who can understand the human's spirit and obey<br>"
+	 			+"its master, whether he is wealthy or not. The Chinese regard it as an auspicious animal. If a dog happens to come<br>"
+	 			+"to a house, it symbolizes the coming of fortune. The invincible God Erlang in Chinese legend used a loyal wolfhound<br>"
+	 			+"to help him capture monsters. ");
 			}
 		});
 		
 		//Adding an action to button 12
 		b12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//curtousy of whychristmas.com
-				JOptionPane.showMessageDialog(null, "<html><strong>Day 12:</strong> DID YOU KNOW... <br>The custom of kissing under Mistletoe comes from England.<br> The original custom was that a berry was picked from the sprig of Mistletoe <br>before the person could be kissed and when all the berries had gone, there could be no more kissing!</html>");
+				JOptionPane.showMessageDialog(null, "<html>Years of the Pig: 1923, 1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019. Pig is not thought to be smart as dog. It likes sleeping and eating and becomes<br>"
+	 			+"fat. Thus it usually features laziness and clumsiness. On the positive side, it behaves itself, has no calculation to<br>"
+	 			+"harm others, and can bring affluence to people. Consequently, pigs were once regarded as wealth.");
 			}
 
 			public void actionPerformed1(ActionEvent arg0) {
@@ -185,7 +213,7 @@ public class ZodiacSymbol extends JFrame {
 			}
 		});
 		
-		//Adding an action to button 12
+		//Adding an action to button 14
 				b14.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						animals run = new animals();
@@ -197,10 +225,10 @@ public class ZodiacSymbol extends JFrame {
 					}
 				});
 				
-				//Adding an action to button 12
+				//Adding an action to button 15
 				b15.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						//curtousy of whychristmas.com
+						
 						JOptionPane.showMessageDialog(null, "<html><strong>Day 12:</strong> DID YOU KNOW... <br>The custom of kissing under Mistletoe comes from England.<br> The original custom was that a berry was picked from the sprig of Mistletoe <br>before the person could be kissed and when all the berries had gone, there could be no more kissing!</html>");
 					}
 
@@ -209,7 +237,30 @@ public class ZodiacSymbol extends JFrame {
 						
 					}
 				});
-
+				
+				//Adding an action to button 16
+				b16.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						final String[] array = {
+				                "Frantastic!",
+				                "Good",
+				                "Okay",
+				                "Hated it!"
+				        };
+				        SwingUtilities.invokeLater(new Runnable() {
+				            @Override
+				          public void run() {
+				                JOptionPane.showMessageDialog(null,new JList(array));
+				                System.exit(0);
+				            }
+				        });
+					}	
+					
+					public void actionPerformed1(ActionEvent arg0) {
+							// TODO Auto-generated method stub
+						
+					}
+				});
 
 //adding the buttons to the frame
 zodiac.add(b1);
@@ -228,6 +279,7 @@ zodiac.add(b13);
 zodiac.add(b14);
 zodiac.add(b15);
 zodiac.add(b16);
+
 JOptionPane.showMessageDialog(null,"<html>Click on the pictures to find out what your Chinese Zodiac has to say!<html>");
 
 	}                                   
