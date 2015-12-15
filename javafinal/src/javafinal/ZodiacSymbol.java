@@ -1,5 +1,6 @@
 package javafinal;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -21,6 +22,7 @@ import javax.swing.SwingUtilities;
  */
 public class ZodiacSymbol extends JFrame {
 	
+	private static final String RED = null;
 	private JLabel item2;
 	
 	public ZodiacSymbol(){ 
@@ -83,9 +85,19 @@ public class ZodiacSymbol extends JFrame {
 	JButton b12=new JButton(pig);
 	
 	JButton b13= new JButton();
+	b13.setBackground(Color.RED);
+    // these next two lines do the magic..
+    b13.setContentAreaFilled(false);
+    b13.setOpaque(true);
+     //changing the color of buttons
 	JButton b14= new JButton("Figure Out Your Sign Here!");
 	JButton b15= new JButton("Compatibility Test!");
+	
 	JButton b16= new JButton("Exit");
+	b16.setBackground(Color.RED);
+    b16.setContentAreaFilled(false);
+    b16.setOpaque(true);
+    	//changing the color of the buttons
 	
 		//Adding an action to button 1
 		b1.addActionListener(new ActionListener() {
@@ -228,8 +240,8 @@ public class ZodiacSymbol extends JFrame {
 				//Adding an action to button 15
 				b15.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
+						 Compatibilty go = new  Compatibilty();
 						
-						JOptionPane.showMessageDialog(null, "<html><strong>Day 12:</strong> DID YOU KNOW... <br>The custom of kissing under Mistletoe comes from England.<br> The original custom was that a berry was picked from the sprig of Mistletoe <br>before the person could be kissed and when all the berries had gone, there could be no more kissing!</html>");
 					}
 
 					public void actionPerformed1(ActionEvent arg0) {
@@ -241,6 +253,7 @@ public class ZodiacSymbol extends JFrame {
 				//Adding an action to button 16
 				b16.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
+						JOptionPane.showMessageDialog(null, "Thanks for visiting! Before you leave give us a rating on how satisfied you were with us!" );
 						final String[] array = {
 				                "Frantastic!",
 				                "Good",
@@ -251,6 +264,7 @@ public class ZodiacSymbol extends JFrame {
 				            @Override
 				          public void run() {
 				                JOptionPane.showMessageDialog(null,new JList(array));
+				                //Stack OverFlow using an array and displaying it with a JOption
 				                System.exit(0);
 				            }
 				        });

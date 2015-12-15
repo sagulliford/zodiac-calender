@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -32,7 +33,7 @@ public class Finalmainclass {
 		
 		
 		frame chinese = new frame();
-		
+		chinese.getContentPane().setBackground(Color.DARK_GRAY );
 		ImageIcon ii = new ImageIcon("chinese-zodiac-chart.png");//displays the image, code borrowed from Stack Overflow
         JLabel lable = new JLabel(ii);
         JScrollPane jsp = new JScrollPane(lable);
