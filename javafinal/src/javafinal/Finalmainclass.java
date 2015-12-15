@@ -1,6 +1,8 @@
 package javafinal;
 
 import javax.swing.JOptionPane;
+
+
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -15,6 +17,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/*Made by: Samm Gulliford
+ * Date: December 4, 2015
+ * 
+ * This program is a Chinese New Years Calender that uses JFrames, JButtons, Graphics and array's to 
+ * make the program work properly. This program will give you facts on your Zodiac Sign. 
+ * 
+ * Help from StackOverFlow, Youtube: The NewBoston
+ */
 public class Finalmainclass {
 	
 	public static void main (String [] args)
@@ -23,7 +33,7 @@ public class Finalmainclass {
 		
 		frame chinese = new frame();
 		
-		ImageIcon ii = new ImageIcon("chinese-zodiac-chart.png");//displays the image
+		ImageIcon ii = new ImageIcon("chinese-zodiac-chart.png");//displays the image, code borrowed from Stack Overflow
         JLabel lable = new JLabel(ii);
         JScrollPane jsp = new JScrollPane(lable);
         	chinese.getContentPane().add(jsp);
